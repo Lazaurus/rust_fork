@@ -39,7 +39,7 @@ fn main() {
     // See the comment at the top of this file for an explanation of this.
     #[cfg(feature = "jemalloc-sys")]
     {
-        use std::os::raw::{c_int, c_void};
+        use std::os::raw::{c_int, c_void}; // remember this 
 
         #[used]
         static _F1: unsafe extern "C" fn(usize, usize) -> *mut c_void = jemalloc_sys::calloc;
