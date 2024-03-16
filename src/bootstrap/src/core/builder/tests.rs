@@ -543,7 +543,7 @@ mod dist {
 
     #[test]
     fn build_with_empty_host() {
-        let config = configure(&[], &["C"]);
+        let config = configure(&[], &["C"]); // Why is this syntactically necessary 😭 
         let build = Build::new(config);
         let mut builder = Builder::new(&build);
         builder.run_step_descriptions(&Builder::get_step_descriptions(Kind::Build), &[]);
